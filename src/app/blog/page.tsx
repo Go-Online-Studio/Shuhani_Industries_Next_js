@@ -16,7 +16,7 @@ export default async function BlogPage() {
         title="Insights &amp; Industry Trends"
         subtitle="Stay updated with the latest trends in CNC machining, architectural wall panel design, and premium woodworking."
         badge="Company Blog"
-        bgImage="/images/bannerImage.webp"
+        bgImage={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/bannerImage.webp`}
       />
 
       {/* 2. Breadcrumbs */}

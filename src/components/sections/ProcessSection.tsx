@@ -10,25 +10,25 @@ const processItems = [
     num: "01",
     title: "Consultation & Design Brief",
     description: "We understand your vision and create a detailed design brief and quote.",
-    imageUrl: "/images/HomeGallery/3d_wooden_sculptures.jpg",
+    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/HomeGallery/3d_wooden_sculptures.jpg`,
   },
   {
     num: "02",
     title: "CAD Design & Prototyping",
     description: "Our designers produce detailed CAD files and prototypes for your approval.",
-    imageUrl: "/images/HomeGallery/precision_metal_parts.jpg",
+    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/HomeGallery/precision_metal_parts.jpg`,
   },
   {
     num: "03",
     title: "CNC Production & Finishing",
     description: "Precision machining followed by expert hand-finishing and quality checks.",
-    imageUrl: "/images/HomeGallery/industrial_components.jpg",
+    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/HomeGallery/industrial_components.jpg`,
   },
   {
     num: "04",
     title: "Delivery & Installation Support",
     description: "Safe packaging and on-time delivery with optional installation assistance.",
-    imageUrl: "/images/A_DECADE_OF_INNOVATION.webp",
+    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/A_DECADE_OF_INNOVATION.webp`,
   },
 ];
 

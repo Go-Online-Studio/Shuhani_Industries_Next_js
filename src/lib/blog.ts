@@ -56,7 +56,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
           title: matterResult.data.title || "Untitled Post",
           date: matterResult.data.date || new Date().toISOString().split("T")[0],
           excerpt: matterResult.data.excerpt || "",
-          coverImage: matterResult.data.coverImage || "/images/bannerImage.webp",
+          coverImage: matterResult.data.coverImage || `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/bannerImage.webp`,
           tags: matterResult.data.tags || [],
           author: matterResult.data.author || "Suhani Industries",
         } as BlogPost;
@@ -110,7 +110,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     title: matterResult.data.title || "Untitled Post",
     date: matterResult.data.date || new Date().toISOString().split("T")[0],
     excerpt: matterResult.data.excerpt || "",
-    coverImage: matterResult.data.coverImage || "/images/bannerImage.webp",
+    coverImage: matterResult.data.coverImage || `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/bannerImage.webp`,
     tags: matterResult.data.tags || [],
     author: matterResult.data.author || "Suhani Industries",
   } as BlogPost;

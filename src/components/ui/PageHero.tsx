@@ -12,7 +12,7 @@ export default function PageHero({
   title,
   subtitle,
   badge,
-  bgImage = "/images/hero_bg.png",
+  bgImage = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/hero_bg.png`,
 }: PageHeroProps) {
   return (
     <section className="relative min-h-[360px] flex items-center justify-center text-center bg-text-dark overflow-hidden">

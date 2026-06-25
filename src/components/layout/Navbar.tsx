@@ -63,9 +63,9 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           {/* Brand Logo */}
-          <a href="/" className="flex items-center h-[52px]">
+          <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/`} className="flex items-center h-[52px]">
             <Image
-              src="/images/BrandLogo.webp"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/BrandLogo.webp`}
               alt="Suhani Industries"
               width={160}
               height={52}
@@ -81,7 +81,7 @@ export default function Navbar() {
               {/* Home */}
               <li>
                 <a
-                  href="/"
+                  href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/`}
                   className={`text-[13px] py-3 font-semibold tracking-wider uppercase transition-colors duration-350 ${
                     pathname === "/"
                       ? "text-primary font-bold"
@@ -115,7 +115,7 @@ export default function Navbar() {
                   <ul className="absolute top-full left-0 mt-0 w-[220px] bg-white border border-border rounded-md shadow-lg p-2 flex flex-col gap-1">
                     <li>
                       <a
-                        href="/services"
+                        href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/services`}
                         className="block px-4 py-2 text-xs font-semibold text-text-dark rounded-sm hover:bg-primary/8 hover:text-primary transition-colors duration-350"
                       >
                         All Services
@@ -165,7 +165,7 @@ export default function Navbar() {
                 <FaPhoneAlt className="text-[10px]" /> +91 98980 11309
               </a>
               <a
-                href="/contact"
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/contact`}
                 className="bg-primary hover:bg-primary-dark text-white text-[11px] font-bold uppercase tracking-wider px-6 py-3 rounded-full transition-all duration-350 hover:-translate-y-0.5 hover:shadow-md"
               >
                 Get Quote
@@ -206,7 +206,7 @@ export default function Navbar() {
           {/* Header */}
           <div className="flex items-center justify-between border-b border-border pb-4 mb-6">
             <Image
-              src="/images/BrandLogo.webp"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/BrandLogo.webp`}
               alt="Suhani Industries"
               width={140}
               height={45}
@@ -225,7 +225,7 @@ export default function Navbar() {
           <ul className="flex flex-col gap-2">
             <li>
               <a
-                href="/"
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/`}
                 className={`block py-3 px-4 rounded-sm font-semibold uppercase tracking-wide text-sm transition-colors ${
                   pathname === "/"
                     ? "bg-primary/6 text-primary"
@@ -254,7 +254,7 @@ export default function Navbar() {
                   <ul className="pl-6 mt-1 flex flex-col gap-1 border-l-2 border-primary/20 ml-4">
                     <li>
                       <a
-                        href="/services"
+                        href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/services`}
                         className="block py-2 px-4 text-xs font-semibold text-text-dark rounded-sm hover:text-primary"
                       >
                         All Services
@@ -295,7 +295,7 @@ export default function Navbar() {
         {/* Footer info in Mobile menu */}
         <div className="border-t border-border pt-6 mt-6 flex flex-col gap-4">
           <a
-            href="/contact"
+            href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/contact`}
             className="w-full bg-primary hover:bg-primary-dark text-white text-xs font-bold uppercase tracking-wider py-3 rounded-full text-center transition-all duration-350 flex justify-center items-center"
           >
             Get Quote

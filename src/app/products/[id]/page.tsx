@@ -36,7 +36,7 @@ export default async function ProductPage({ params }: Props) {
         title={product.name}
         subtitle={product.shortDesc}
         badge="Product Details"
-        bgImage="/images/HomeGallery/wave_border_design.jpg"
+        bgImage={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/HomeGallery/wave_border_design.jpg`}
       />
 
       {/* 2. Breadcrumbs */}
@@ -85,7 +85,7 @@ export default async function ProductPage({ params }: Props) {
                   <FaWhatsapp className="text-base" /> Get Free Quote
                 </a>
                 <a
-                  href="/contact"
+                  href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/contact`}
                   className="inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white text-xs font-bold uppercase tracking-wider px-7 py-3.5 rounded-full transition-all duration-350 hover:-translate-y-0.5"
                 >
                   <FaEnvelope className="text-sm" /> Contact Us

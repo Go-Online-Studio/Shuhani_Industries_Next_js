@@ -13,7 +13,7 @@ export default function ContactPage() {
         title="Contact Us"
         subtitle="Have a project in mind? Reach out for a free consultation and custom quote — we typically respond within 24 hours."
         badge="Get In Touch"
-        bgImage="/images/HomeGallery/precision_metal_parts.jpg"
+        bgImage={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/HomeGallery/precision_metal_parts.jpg`}
       />
 
       {/* 2. Breadcrumbs */}

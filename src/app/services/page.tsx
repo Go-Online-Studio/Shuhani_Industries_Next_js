@@ -13,7 +13,7 @@ const servicesList = [
     title: "3D Wood Carving",
     description:
       "Experience the depth of artistry with our 3D carving services. We transform wood and other substrates into intricate, high-relief sculptures, decorative panels, and custom interior components.",
-    imageUrl: "/images/3D_CARVING_ServiceImg.webp",
+    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/3D_CARVING_ServiceImg.webp`,
   },
   {
     num: "02",
@@ -21,7 +21,7 @@ const servicesList = [
     title: "2D CNC Carving & Cutting",
     description:
       "Precision flat cutting, engraving, and profiling for signage, architectural jaali screens, and wooden panels. Perfect for reproducing complex, intricate vector patterns on flat sheets.",
-    imageUrl: "/images/2D_CARVING_ServiceImg.webp",
+    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/2D_CARVING_ServiceImg.webp`,
   },
   {
     num: "03",
@@ -29,7 +29,7 @@ const servicesList = [
     title: "Wave Board Wall Panels",
     description:
       "Add texture, movement, and a sense of luxury to your spaces with our custom wave boards. Ideal for modern feature walls, ceiling panels, reception desks, and visual highlights.",
-    imageUrl: "/images/WAVE_BOARD_ServiceImg.webp",
+    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/WAVE_BOARD_ServiceImg.webp`,
   },
   {
     num: "04",
@@ -37,7 +37,7 @@ const servicesList = [
     title: "Metal CNC Machining",
     description:
       "High-accuracy CNC cutting, milling, and engraving of steel, aluminium, brass, and copper components. Delivering industrial-strength durability coupled with micron-level tolerances.",
-    imageUrl: "/images/METAL_CNC _ServiceImg.webp",
+    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/METAL_CNC _ServiceImg.webp`,
   },
   {
     num: "05",
@@ -45,7 +45,7 @@ const servicesList = [
     title: "Wooden Legs & Furniture Turnings",
     description:
       "Custom-turned, carved, or contemporary shaped wooden legs for tables, sofas, chairs, and cabinets. Consistent craftsmanship ensuring matching sets with premium finishes.",
-    imageUrl: "/images/WOODEN_LEGS_ServiceImg.webp",
+    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/WOODEN_LEGS_ServiceImg.webp`,
   },
   {
     num: "06",
@@ -53,7 +53,7 @@ const servicesList = [
     title: "Bespoke Custom Fabrication",
     description:
       "End-to-end custom fabrication solutions. Bring us your CAD files, hand sketches, or concepts, and our designers and engineers will handle everything from prototyping to final delivery.",
-    imageUrl: "/images/waveBoardAbout.webp",
+    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/waveBoardAbout.webp`,
   },
 ];
 
@@ -65,7 +65,7 @@ export default function ServicesPage() {
         title="Our Services"
         subtitle="Offering a comprehensive range of precision manufacturing solutions, from intricate 3D wood carving to industrial-grade metal CNC machining."
         badge="What We Do"
-        bgImage="/images/bannerImage.webp"
+        bgImage={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/bannerImage.webp`}
       />
 
       {/* 2. Breadcrumbs */}

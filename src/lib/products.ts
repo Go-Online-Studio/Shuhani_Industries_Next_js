@@ -30,11 +30,11 @@ export const productsList: Product[] = [
       "Multi-Axis Machining",
     ],
     images: [
-      "/images/productImages/3DCarvingProduct.webp",
-      "/images/ServicesPageImage/3DWoodCarving1.jpg",
-      "/images/ServicesPageImage/3DWoodCarving2.jpg",
-      "/images/ServicesPageImage/3DWoodCarving3.jpg",
-      "/images/ServicesPageImage/3DWoodCarving4.jpg",
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/productImages/3DCarvingProduct.webp`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/3DWoodCarving1.jpg`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/3DWoodCarving2.jpg`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/3DWoodCarving3.jpg`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/3DWoodCarving4.jpg`,
     ],
   },
   {
@@ -57,10 +57,10 @@ export const productsList: Product[] = [
       "Batch Production",
     ],
     images: [
-      "/images/productImages/2DCarvingProduct.webp",
-      "/images/ServicesPageImage/2D_Carving1.jpg",
-      "/images/ServicesPageImage/2D_Carving2.jpg",
-      "/images/ServicesPageImage/2D_Carving3.jpg",
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/productImages/2DCarvingProduct.webp`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/2D_Carving1.jpg`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/2D_Carving2.jpg`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/2D_Carving3.jpg`,
     ],
   },
   {
@@ -83,12 +83,12 @@ export const productsList: Product[] = [
       "Zero-Joint Installation",
     ],
     images: [
-      "/images/productImages/WaveBoardProducts1.webp",
-      "/images/productImages/WaveBoardProducts2.webp",
-      "/images/productImages/WaveBoardProducts3.webp",
-      "/images/ServicesPageImage/WaveBoard1.jpg",
-      "/images/ServicesPageImage/WaveBoard2.jpg",
-      "/images/ServicesPageImage/WaveBoard3.jpg",
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/productImages/WaveBoardProducts1.webp`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/productImages/WaveBoardProducts2.webp`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/productImages/WaveBoardProducts3.webp`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/WaveBoard1.jpg`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/WaveBoard2.jpg`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/WaveBoard3.jpg`,
     ],
   },
   {
@@ -111,11 +111,11 @@ export const productsList: Product[] = [
       "CAD/CAM Integration",
     ],
     images: [
-      "/images/productImages/MetalCNC_Products1.webp",
-      "/images/productImages/MetalCNC_Products2.webp",
-      "/images/productImages/MetalCNC_Products3.webp",
-      "/images/ServicesPageImage/MetalCNC1.jpg",
-      "/images/ServicesPageImage/MetalCNC2.jpg",
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/productImages/MetalCNC_Products1.webp`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/productImages/MetalCNC_Products2.webp`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/productImages/MetalCNC_Products3.webp`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/MetalCNC1.jpg`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/MetalCNC2.jpg`,
     ],
   },
   {
@@ -138,9 +138,9 @@ export const productsList: Product[] = [
       "Sanded Ready for Finish",
     ],
     images: [
-      "/images/productImages/WoodenLegProduct.webp",
-      "/images/WOODEN_LEGS_ServiceImg.webp",
-      "/images/bannerImage.webp",
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/productImages/WoodenLegProduct.webp`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/WOODEN_LEGS_ServiceImg.webp`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/bannerImage.webp`,
     ],
   },
   {
@@ -163,9 +163,9 @@ export const productsList: Product[] = [
       "Installation Assistance",
     ],
     images: [
-      "/images/waveBoardAbout.webp",
-      "/images/bannerImage.webp",
-      "/images/A_DECADE_OF_INNOVATION.webp",
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/waveBoardAbout.webp`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/bannerImage.webp`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/A_DECADE_OF_INNOVATION.webp`,
     ],
   },
 ];

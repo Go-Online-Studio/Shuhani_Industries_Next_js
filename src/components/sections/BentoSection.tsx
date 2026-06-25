@@ -21,7 +21,7 @@ export default function BentoSection() {
             {/* Left Big Image Card */}
             <div className="relative rounded-lg overflow-hidden h-[340px] sm:h-auto group shadow-sm border border-border/30">
               <Image
-                src="/images/HomeGallery/Intricate_wood_carving_panel.jpg"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/HomeGallery/Intricate_wood_carving_panel.jpg`}
                 alt="Intricate wood carving panel"
                 fill
                 sizes="(max-width: 640px) 100vw, 50vw"
@@ -42,7 +42,7 @@ export default function BentoSection() {
               {/* Top Right Small Image */}
               <div className="relative rounded-lg overflow-hidden h-[240px] group shadow-sm border border-border/30">
                 <Image
-                  src="/images/HomeGallery/Cnc_metal_components.jpg"
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/HomeGallery/Cnc_metal_components.jpg`}
                   alt="CNC metal components"
                   fill
                   sizes="(max-width: 640px) 100vw, 25vw"
@@ -53,7 +53,7 @@ export default function BentoSection() {
               {/* Bottom Right Small Image with Badge */}
               <div className="relative rounded-lg overflow-hidden h-[260px] group shadow-sm border border-border/30">
                 <Image
-                  src="/images/HomeGallery/wave_border_design.jpg"
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/HomeGallery/wave_border_design.jpg`}
                   alt="Wave border design"
                   fill
                   sizes="(max-width: 640px) 100vw, 25vw"

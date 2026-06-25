@@ -17,95 +17,95 @@ interface PortfolioItem {
 const portfolioItems: PortfolioItem[] = [
   // 3D Carving
   {
-    url: "/images/ServicesPageImage/3DWoodCarving1.jpg",
+    url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/3DWoodCarving1.jpg`,
     caption: "Decorative Panel",
     category: "3d",
     categoryLabel: "3D Carving",
   },
   {
-    url: "/images/ServicesPageImage/3DWoodCarving2.jpg",
+    url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/3DWoodCarving2.jpg`,
     caption: "Relief Sculpture",
     category: "3d",
     categoryLabel: "3D Carving",
   },
   {
-    url: "/images/ServicesPageImage/3DWoodCarving3.jpg",
+    url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/3DWoodCarving3.jpg`,
     caption: "Custom Art Piece",
     category: "3d",
     categoryLabel: "3D Carving",
   },
   {
-    url: "/images/ServicesPageImage/3DWoodCarving4.jpg",
+    url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/3DWoodCarving4.jpg`,
     caption: "Architectural Detail",
     category: "3d",
     categoryLabel: "3D Carving",
   },
   // 2D Carving
   {
-    url: "/images/ServicesPageImage/2D_Carving1.jpg",
+    url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/2D_Carving1.jpg`,
     caption: "Jali Pattern",
     category: "2d",
     categoryLabel: "2D Carving",
   },
   {
-    url: "/images/ServicesPageImage/2D_Carving2.jpg",
+    url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/2D_Carving2.jpg`,
     caption: "Custom Signage",
     category: "2d",
     categoryLabel: "2D Carving",
   },
   {
-    url: "/images/ServicesPageImage/2D_Carving3.jpg",
+    url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/2D_Carving3.jpg`,
     caption: "Engraved Panel",
     category: "2d",
     categoryLabel: "2D Carving",
   },
   // Wave Board
   {
-    url: "/images/ServicesPageImage/WaveBoard1.jpg",
+    url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/WaveBoard1.jpg`,
     caption: "Feature Wall",
     category: "wave",
     categoryLabel: "Wave Board",
   },
   {
-    url: "/images/ServicesPageImage/WaveBoard2.jpg",
+    url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/WaveBoard2.jpg`,
     caption: "Interior Design",
     category: "wave",
     categoryLabel: "Wave Board",
   },
   {
-    url: "/images/ServicesPageImage/WaveBoard3.jpg",
+    url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/WaveBoard3.jpg`,
     caption: "Ceiling Panel",
     category: "wave",
     categoryLabel: "Wave Board",
   },
   // Metal CNC
   {
-    url: "/images/ServicesPageImage/MetalCNC1.jpg",
+    url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/MetalCNC1.jpg`,
     caption: "Industrial Parts",
     category: "metal",
     categoryLabel: "Metal CNC",
   },
   {
-    url: "/images/ServicesPageImage/MetalCNC2.jpg",
+    url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ServicesPageImage/MetalCNC2.jpg`,
     caption: "Precision Parts",
     category: "metal",
     categoryLabel: "Metal CNC",
   },
   // Additional
   {
-    url: "/images/gallery/GalleryImages1.jpg",
+    url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/gallery/GalleryImages1.jpg`,
     caption: "Workshop Project",
     category: "3d",
     categoryLabel: "CNC Craft",
   },
   {
-    url: "/images/gallery/GalleryImages5.jpg",
+    url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/gallery/GalleryImages5.jpg`,
     caption: "Finished Product",
     category: "2d",
     categoryLabel: "Precision Work",
   },
   {
-    url: "/images/gallery/GalleryImages8.jpg",
+    url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/gallery/GalleryImages8.jpg`,
     caption: "Custom Fabrication",
     category: "metal",
     categoryLabel: "Metal Work",
@@ -161,7 +161,7 @@ export default function GalleryPage() {
         title="Project Gallery"
         subtitle="Browse our finest work across CNC machining, wood carving, wave boards and metal fabrication."
         badge="Our Portfolio"
-        bgImage="/images/HomeGallery/wave_border_design.jpg"
+        bgImage={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/HomeGallery/wave_border_design.jpg`}
       />
 
       {/* 2. Breadcrumbs */}
