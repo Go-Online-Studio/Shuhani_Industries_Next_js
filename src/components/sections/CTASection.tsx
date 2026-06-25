@@ -14,7 +14,10 @@ export default function CTASection() {
     <section id="cta" className="py-24 bg-background-custom">
       <div className="container mx-auto px-6">
         {/* Inner Card */}
-        <div className="relative rounded-xl overflow-hidden min-h-[380px] flex items-center justify-center bg-[url('/images/cta_bg.png')] bg-center bg-cover bg-no-repeat shadow-lg border border-border/25">
+        <div
+          className="relative rounded-xl overflow-hidden min-h-[380px] flex items-center justify-center bg-center bg-cover bg-no-repeat shadow-lg border border-border/25"
+          style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/cta_bg.png')` }}
+        >
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/72 z-0" />
 

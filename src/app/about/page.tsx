@@ -5,6 +5,7 @@ import PageHero from "@/components/ui/PageHero";
 import BreadcrumbBar from "@/components/ui/BreadcrumbBar";
 import StatCounter from "@/components/ui/StatCounter";
 import CTASection from "@/components/sections/CTASection";
+import { withBasePath } from "@/lib/basePath";
 import { TbTarget, TbBrush, TbClock, TbBulb, TbUsers, TbLeaf, TbArrowRight } from "react-icons/tb";
 
 const values = [
@@ -95,7 +96,7 @@ export default function AboutPage() {
                 From intricate 3D wood sculptures and decorative wave boards to high-tolerance metal components — every piece that leaves our workshop carries our commitment to quality, accuracy, and on-time delivery.
               </p>
               <Link
-                href="/services"
+                href={withBasePath("/services")}
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-xs font-bold uppercase tracking-wider px-7 py-4 rounded-full transition-all duration-350 hover:-translate-y-0.5 hover:shadow-md"
               >
                 <TbArrowRight className="text-base" /> Explore Our Services

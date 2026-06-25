@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { FaWhatsapp, FaThLarge } from "react-icons/fa";
 import StatCounter from "@/components/ui/StatCounter";
+import { withBasePath } from "@/lib/basePath";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 
 export default function HeroSection() {
@@ -15,7 +16,8 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-[calc(100vh-68px)] flex items-center bg-[url('/images/hero_bg.png')] bg-center bg-cover bg-no-repeat py-20 overflow-hidden"
+      className="relative min-h-[calc(100vh-68px)] flex items-center bg-center bg-cover bg-no-repeat py-20 overflow-hidden"
+      style={{ backgroundImage: `url('${withBasePath("/images/hero_bg.png")}')` }}
     >
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/82 via-black/55 to-black/20 z-0" />
@@ -50,7 +52,7 @@ export default function HeroSection() {
               <FaWhatsapp className="text-sm" /> Get Free Quote
             </a>
             <Link
-              href="/services"
+              href={withBasePath("/services")}
               className="inline-flex items-center gap-2 bg-transparent border-2 border-white/60 hover:border-white hover:bg-white/10 text-white text-xs font-bold uppercase tracking-wider px-7 py-4 rounded-full transition-all duration-350 hover:-translate-y-0.5"
             >
               <FaThLarge className="text-sm" /> View Services

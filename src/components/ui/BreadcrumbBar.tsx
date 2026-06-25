@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { withBasePath } from "@/lib/basePath";
 
 interface Breadcrumb {
   name: string;
@@ -16,7 +17,7 @@ export default function BreadcrumbBar({ items }: BreadcrumbBarProps) {
       <div className="container mx-auto px-6">
         <nav className="flex items-center text-xs font-medium">
           <Link
-            href="/"
+            href={withBasePath("/")}
             className="text-primary-light hover:text-primary transition-colors duration-350"
           >
             Home

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { HiX, HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
@@ -48,11 +49,12 @@ export default function Lightbox({
   }, [isOpen, onClose, onPrev, onNext]);
 
   if (!isOpen || currentIndex === null) return null;
+  if (typeof document === "undefined") return null;
 
   const currentImage = images[currentIndex];
 
-  return (
-    <div className="fixed inset-0 z-[100] bg-black/95 flex flex-col items-center justify-center p-4 select-none animate-fade-in">
+  return createPortal(
+    <div className="fixed inset-0 z-[99999] bg-black/95 flex flex-col items-center justify-center p-4 select-none animate-fade-in overflow-y-auto">
       {/* Close Button */}
       <button
         onClick={onClose}
@@ -108,6 +110,7 @@ export default function Lightbox({
           Image {currentIndex + 1} of {images.length}
         </p>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

@@ -4,7 +4,10 @@ import { TbWood, TbTarget, TbShieldCheck } from "react-icons/tb";
 
 export default function FeatureBanner() {
   return (
-    <section className="relative py-24 pb-48 bg-[url('/images/feature_banner_bg.png')] bg-center bg-cover bg-no-repeat bg-fixed">
+    <section
+      className="relative py-24 pb-48 bg-center bg-cover bg-no-repeat bg-fixed"
+      style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/feature_banner_bg.png')` }}
+    >
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/68 z-0" />
 
