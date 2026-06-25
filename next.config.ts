@@ -5,6 +5,7 @@ const isGithubActions = process.env.GITHUB_ACTIONS === "true";
 const nextConfig: NextConfig = {
   output: "export",
   basePath: isGithubActions ? "/Shuhani_Industries_Next_js" : "",
+  trailingSlash: true,
   images: {
     unoptimized: true,
     remotePatterns: [
