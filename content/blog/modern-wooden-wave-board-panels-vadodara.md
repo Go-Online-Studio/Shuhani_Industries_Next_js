@@ -2,7 +2,7 @@
 title: "Modern Wooden Wave Board Wall Panels in Vadodara"
 date: "2026-06-25"
 excerpt: "Transform your interior spaces with stunning wooden wave board wall panels. Suhani Industries is Vadodara's top manufacturer of textured MDF 3D wave boards."
-coverImage: "/images/HomeGallery/Architectural_screen_design.jpg"
+coverImage: "https://i.pinimg.com/736x/53/7c/47/537c470a1d1a195e93398ffda2db3d4c.jpg"
 tags: ["Wooden Wave Board", "MDF Wave Panels", "3D Wall Panels Vadodara", "Interior Architecture", "Textured Wall Panels Vadodara"]
 author: "Suhani Industries"
 ---
