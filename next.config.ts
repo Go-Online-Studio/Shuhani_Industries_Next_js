@@ -1,11 +1,18 @@
 import type { NextConfig } from "next";
 
 const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-const basePath = isGithubActions ? "/Shuhani_Industries_Next_js" : "";
+let basePath = "";
+
+if (isGithubActions && process.env.GITHUB_REPOSITORY) {
+  const repoName = process.env.GITHUB_REPOSITORY.split('/')[1];
+  if (repoName) {
+    basePath = `/${repoName}`;
+  }
+}
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: basePath,
+  ...(basePath ? { basePath } : {}),
   trailingSlash: true,
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
