@@ -11,7 +11,8 @@ export function withBasePath(path: string): string {
   }
 
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
-  const fullPath = `${basePath}${normalizedPath}`;
+  const hasBasePath = basePath && (normalizedPath.startsWith(basePath + "/") || normalizedPath === basePath);
+  const fullPath = hasBasePath ? normalizedPath : `${basePath}${normalizedPath}`;
 
   // Check if it's a static asset file (ends with a common extension)
   const pathWithoutQuery = fullPath.split(/[?#]/)[0];
