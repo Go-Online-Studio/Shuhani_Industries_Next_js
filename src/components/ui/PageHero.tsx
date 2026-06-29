@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { withBasePath } from "@/lib/basePath";
 
 interface PageHeroProps {
   title: string;
@@ -12,7 +13,7 @@ export default function PageHero({
   title,
   subtitle,
   badge,
-  bgImage = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/hero_bg.png`,
+  bgImage = "/images/hero_bg.png",
 }: PageHeroProps) {
   return (
     <section className="relative min-h-[360px] flex items-center justify-center text-center bg-text-dark overflow-hidden">
@@ -21,7 +22,7 @@ export default function PageHero({
 
       {/* Hero Background Image */}
       <Image
-        src={bgImage}
+        src={withBasePath(bgImage)}
         alt={title}
         fill
         priority

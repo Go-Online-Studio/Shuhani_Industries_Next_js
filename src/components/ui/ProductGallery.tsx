@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { HiArrowsPointingOut } from "react-icons/hi2";
 import Lightbox from "@/components/ui/Lightbox";
+import { withBasePath } from "@/lib/basePath";
 
 interface ProductGalleryProps {
   images: string[];
@@ -33,7 +34,7 @@ export default function ProductGallery({ images, productName }: ProductGalleryPr
   };
 
   const lightboxImages = images.map((img) => ({
-    url: img,
+    url: withBasePath(img),
     caption: `${productName} Gallery Showcase`,
   }));
 
@@ -45,7 +46,7 @@ export default function ProductGallery({ images, productName }: ProductGalleryPr
         className="relative aspect-[4/3] w-full rounded-lg overflow-hidden border border-border/30 bg-[#251e18] shadow-sm cursor-pointer group"
       >
         <Image
-          src={images[activeImgIndex]}
+          src={withBasePath(images[activeImgIndex])}
           alt={`${productName} Main Preview`}
           fill
           priority
@@ -73,7 +74,7 @@ export default function ProductGallery({ images, productName }: ProductGalleryPr
               }`}
             >
               <Image
-                src={img}
+                src={withBasePath(img)}
                 alt={`${productName} thumbnail ${index + 1}`}
                 fill
                 sizes="100px"

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { TbArrowUpRight } from "react-icons/tb";
 import { getWhatsAppLink } from "@/lib/whatsapp";
+import { withBasePath } from "@/lib/basePath";
 
 interface ServiceCardProps {
   id: string;
@@ -32,7 +33,7 @@ export default function ServiceCard({
       {/* Image Container */}
       <Link href={`/products/${id}`} className="relative h-[240px] overflow-hidden block">
         <Image
-          src={imageUrl}
+          src={withBasePath(imageUrl)}
           alt={title}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

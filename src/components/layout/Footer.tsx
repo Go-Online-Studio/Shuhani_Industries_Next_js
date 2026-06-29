@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FaFacebookF, FaPinterestP, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { HiMapPin, HiPhone, HiEnvelope } from "react-icons/hi2";
+import { withBasePath } from "@/lib/basePath";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,7 +19,7 @@ export default function Footer() {
             <div className="lg:col-span-4 flex flex-col gap-6">
               <div className="h-[90px] flex items-center">
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/Suhani.svg`}
+                  src={withBasePath("/images/Suhani.svg")}
                   alt="Suhani Industries"
                   width={180}
                   height={90}

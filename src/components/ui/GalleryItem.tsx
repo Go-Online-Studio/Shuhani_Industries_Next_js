@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { HiMagnifyingGlassPlus } from "react-icons/hi2";
+import { withBasePath } from "@/lib/basePath";
 
 interface GalleryItemProps {
   url: string;
@@ -29,7 +30,7 @@ export default function GalleryItem({
     >
       {/* Background Image */}
       <Image
-        src={displayImage}
+        src={withBasePath(displayImage)}
         alt={caption}
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

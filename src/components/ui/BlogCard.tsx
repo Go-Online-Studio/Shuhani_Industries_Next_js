@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
+import { withBasePath } from "@/lib/basePath";
 
 interface BlogCardProps {
   title: string;
@@ -32,7 +33,7 @@ export default function BlogCard({
       {/* Image Container */}
       <Link href={`/blog/${slug}`} className="relative aspect-[16/10] overflow-hidden block">
         <Image
-          src={coverImage}
+          src={withBasePath(coverImage)}
           alt={title}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

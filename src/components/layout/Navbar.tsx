@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { FaPhoneAlt } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
+import { withBasePath } from "@/lib/basePath";
 
 const servicesList = [
   { id: "3d-carving", name: "3D Wood Carving" },
@@ -63,9 +64,9 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           {/* Brand Logo */}
-          <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/`} className="flex items-center h-[52px]">
+          <a href={withBasePath("/")} className="flex items-center h-[52px]">
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/BrandLogo.webp`}
+              src={withBasePath("/images/BrandLogo.webp")}
               alt="Suhani Industries"
               width={160}
               height={52}
@@ -206,7 +207,7 @@ export default function Navbar() {
           {/* Header */}
           <div className="flex items-center justify-between border-b border-border pb-4 mb-6">
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/BrandLogo.webp`}
+              src={withBasePath("/images/BrandLogo.webp")}
               alt="Suhani Industries"
               width={140}
               height={45}
