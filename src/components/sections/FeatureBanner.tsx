@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { TbWood, TbTarget, TbShieldCheck } from "react-icons/tb";
+import { withBasePath } from "@/lib/basePath";
 
 export default function FeatureBanner() {
   return (
@@ -29,7 +30,7 @@ export default function FeatureBanner() {
           {/* Circular floating image on top center */}
           <div className="absolute -top-11 left-1/2 -translate-x-1/2 w-[90px] h-[90px] rounded-md overflow-hidden border-4 border-white shadow-md">
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/ENGINEERING_PRECISION.webp`}
+              src={withBasePath("/images/ENGINEERING_PRECISION.webp")}
               alt="Engineering precision"
               fill
               className="object-cover"

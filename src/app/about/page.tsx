@@ -49,7 +49,7 @@ export default function AboutPage() {
         title="About Suhani Industries"
         subtitle="A decade of precision manufacturing, artistic craftsmanship and innovation — proudly based in Gujarat, India."
         badge="Who We Are"
-        bgImage={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/A_DECADE_OF_INNOVATION.webp`}
+        bgImage={withBasePath("/images/A_DECADE_OF_INNOVATION.webp")}
       />
 
       {/* 2. Breadcrumbs */}
@@ -62,7 +62,7 @@ export default function AboutPage() {
             {/* Left Column: Workshop Image */}
             <div className="relative rounded-lg overflow-hidden group shadow-sm border border-border/35 max-w-[100%] mx-auto lg:mx-0">
               <Image
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/HomeGallery/Intricate_wood_carving_panel.jpg`}
+                src={withBasePath("/images/HomeGallery/Intricate_wood_carving_panel.jpg")}
                 alt="Suhani Industries Workshop"
                 width={540}
                 height={400}

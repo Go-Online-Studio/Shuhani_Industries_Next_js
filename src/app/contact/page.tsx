@@ -4,6 +4,7 @@ import BreadcrumbBar from "@/components/ui/BreadcrumbBar";
 import ContactCard from "@/components/ui/ContactCard";
 import ContactForm from "@/components/sections/ContactForm";
 import { TbMapPin, TbPhone, TbMail, TbClock } from "react-icons/tb";
+import { withBasePath } from "@/lib/basePath";
 
 export default function ContactPage() {
   return (
@@ -13,7 +14,7 @@ export default function ContactPage() {
         title="Contact Us"
         subtitle="Have a project in mind? Reach out for a free consultation and custom quote — we typically respond within 24 hours."
         badge="Get In Touch"
-        bgImage={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/HomeGallery/precision_metal_parts.jpg`}
+        bgImage={withBasePath("/images/HomeGallery/precision_metal_parts.jpg")}
       />
 
       {/* 2. Breadcrumbs */}

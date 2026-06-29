@@ -4,6 +4,7 @@ import BreadcrumbBar from "@/components/ui/BreadcrumbBar";
 import BlogCard from "@/components/ui/BlogCard";
 import CTASection from "@/components/sections/CTASection";
 import { getAllPosts } from "@/lib/blog";
+import { withBasePath } from "@/lib/basePath";
 
 export default async function BlogPage() {
   // Read posts directly from file system on the server
@@ -16,7 +17,7 @@ export default async function BlogPage() {
         title="Insights &amp; Industry Trends"
         subtitle="Stay updated with the latest trends in CNC machining, architectural wall panel design, and premium woodworking."
         badge="Company Blog"
-        bgImage={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/bannerImage.webp`}
+        bgImage={withBasePath("/images/bannerImage.webp")}
       />
 
       {/* 2. Breadcrumbs */}

@@ -7,6 +7,7 @@ import CTASection from "@/components/sections/CTASection";
 import { productsList, getProductById } from "@/lib/products";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 import { FaWhatsapp, FaEnvelope, FaCheck } from "react-icons/fa";
+import { withBasePath } from "@/lib/basePath";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -36,7 +37,7 @@ export default async function ProductPage({ params }: Props) {
         title={product.name}
         subtitle={product.shortDesc}
         badge="Product Details"
-        bgImage={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/HomeGallery/wave_border_design.jpg`}
+        bgImage={withBasePath("/images/HomeGallery/wave_border_design.jpg")}
       />
 
       {/* 2. Breadcrumbs */}
@@ -85,7 +86,7 @@ export default async function ProductPage({ params }: Props) {
                   <FaWhatsapp className="text-base" /> Get Free Quote
                 </a>
                 <a
-                  href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/contact`}
+                  href={withBasePath("/contact")}
                   className="inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white text-xs font-bold uppercase tracking-wider px-7 py-3.5 rounded-full transition-all duration-350 hover:-translate-y-0.5"
                 >
                   <FaEnvelope className="text-sm" /> Contact Us

@@ -4,31 +4,32 @@ import React from "react";
 import Image from "next/image";
 import { TbMessageCircle, TbArrowUpRight } from "react-icons/tb";
 import { getWhatsAppLink } from "@/lib/whatsapp";
+import { withBasePath } from "@/lib/basePath";
 
 const processItems = [
   {
     num: "01",
     title: "Consultation & Design Brief",
     description: "We understand your vision and create a detailed design brief and quote.",
-    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/HomeGallery/3d_wooden_sculptures.jpg`,
+    imageUrl: withBasePath("/images/HomeGallery/3d_wooden_sculptures.jpg"),
   },
   {
     num: "02",
     title: "CAD Design & Prototyping",
     description: "Our designers produce detailed CAD files and prototypes for your approval.",
-    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/HomeGallery/precision_metal_parts.jpg`,
+    imageUrl: withBasePath("/images/HomeGallery/precision_metal_parts.jpg"),
   },
   {
     num: "03",
     title: "CNC Production & Finishing",
     description: "Precision machining followed by expert hand-finishing and quality checks.",
-    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/HomeGallery/industrial_components.jpg`,
+    imageUrl: withBasePath("/images/HomeGallery/industrial_components.jpg"),
   },
   {
     num: "04",
     title: "Delivery & Installation Support",
     description: "Safe packaging and on-time delivery with optional installation assistance.",
-    imageUrl: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/A_DECADE_OF_INNOVATION.webp`,
+    imageUrl: withBasePath("/images/A_DECADE_OF_INNOVATION.webp"),
   },
 ];
 
