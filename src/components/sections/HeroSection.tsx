@@ -52,7 +52,7 @@ export default function HeroSection() {
               <FaWhatsapp className="text-sm" /> Get Free Quote
             </a>
             <Link
-              href={withBasePath("/services")}
+              href="/services"
               className="inline-flex items-center gap-2 bg-transparent border-2 border-white/60 hover:border-white hover:bg-white/10 text-white text-xs font-bold uppercase tracking-wider px-7 py-4 rounded-full transition-all duration-350 hover:-translate-y-0.5"
             >
               <FaThLarge className="text-sm" /> View Services

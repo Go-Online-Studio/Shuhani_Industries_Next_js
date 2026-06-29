@@ -20,6 +20,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"),
   title: "Suhani Industries | Precision CNC Wood & Metal Products",
   description:
     "Leading manufacturer of high-quality CNC 3D wood carvings, 2D cutting, wave board wall panels, metal CNC machining, and premium wooden legs in Vadodara, Gujarat.",

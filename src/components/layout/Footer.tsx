@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FaFacebookF, FaPinterestP, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { HiMapPin, HiPhone, HiEnvelope } from "react-icons/hi2";
+import Link from "next/link";
 import { withBasePath } from "@/lib/basePath";
 
 export default function Footer() {
@@ -76,29 +77,29 @@ export default function Footer() {
               </h4>
               <ul className="flex flex-col gap-3">
                 <li>
-                  <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/`} className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
+                  <Link href="/" className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/services`} className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
+                  <Link href="/services" className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/gallery`} className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
+                  <Link href="/gallery" className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
                     Gallery
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/blog`} className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
+                  <Link href="/blog" className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
                     Blog
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/contact`} className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
+                  <Link href="/contact" className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -110,29 +111,29 @@ export default function Footer() {
               </h4>
               <ul className="flex flex-col gap-3">
                 <li>
-                  <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/products/3d-carving`} className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
+                  <Link href="/products/3d-carving" className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
                     3D Wood Carving
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/products/2d-carving`} className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
+                  <Link href="/products/2d-carving" className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
                     2D CNC Cutting
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/products/wave-board`} className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
+                  <Link href="/products/wave-board" className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
                     Wave Board Panels
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/products/metal-cnc`} className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
+                  <Link href="/products/metal-cnc" className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
                     Metal CNC Work
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/products/wooden-legs`} className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
+                  <Link href="/products/wooden-legs" className="text-sm text-white/60 hover:text-primary-light transition-colors duration-350">
                     Wooden Legs
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { FaPhoneAlt } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
+import Link from "next/link";
 import { withBasePath } from "@/lib/basePath";
 
 const servicesList = [
@@ -64,7 +65,7 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           {/* Brand Logo */}
-          <a href={withBasePath("/")} className="flex items-center h-[52px]">
+          <Link href="/" className="flex items-center h-[52px]">
             <Image
               src={withBasePath("/images/BrandLogo.webp")}
               alt="Suhani Industries"
@@ -74,15 +75,15 @@ export default function Navbar() {
               className="h-full w-auto object-contain"
               style={{ width: "auto" }}
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             <ul className="flex items-center gap-6">
               {/* Home */}
               <li>
-                <a
-                  href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/`}
+                <Link
+                  href="/"
                   className={`text-[13px] py-3 font-semibold tracking-wider uppercase transition-colors duration-350 ${
                     pathname === "/"
                       ? "text-primary font-bold"
@@ -92,7 +93,7 @@ export default function Navbar() {
                   }`}
                 >
                   Home
-                </a>
+                </Link>
               </li>
 
               {/* Services Dropdown */}
@@ -115,21 +116,21 @@ export default function Navbar() {
                 {isDropdownOpen && (
                   <ul className="absolute top-full left-0 mt-0 w-[220px] bg-white border border-border rounded-md shadow-lg p-2 flex flex-col gap-1">
                     <li>
-                      <a
-                        href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/services`}
+                      <Link
+                        href="/services"
                         className="block px-4 py-2 text-xs font-semibold text-text-dark rounded-sm hover:bg-primary/8 hover:text-primary transition-colors duration-350"
                       >
                         All Services
-                      </a>
+                      </Link>
                     </li>
                     {servicesList.map((service) => (
                       <li key={service.id}>
-                        <a
+                        <Link
                           href={`/products/${service.id}`}
                           className="block px-4 py-2 text-xs font-medium text-text-dark rounded-sm hover:bg-primary/8 hover:text-primary transition-colors duration-350"
                         >
                           {service.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -139,7 +140,7 @@ export default function Navbar() {
               {/* Other Links */}
               {navLinks.slice(1).map((link) => (
                 <li key={link.name}>
-                  <a
+                  <Link
                     href={link.href}
                     className={`text-[13px] py-3 font-semibold tracking-wider uppercase transition-colors duration-350 ${
                       isActive(link.href)
@@ -150,7 +151,7 @@ export default function Navbar() {
                     }`}
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -165,12 +166,12 @@ export default function Navbar() {
               >
                 <FaPhoneAlt className="text-[10px]" /> +91 98980 11309
               </a>
-              <a
-                href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/contact`}
+              <Link
+                href="/contact"
                 className="bg-primary hover:bg-primary-dark text-white text-[11px] font-bold uppercase tracking-wider px-6 py-3 rounded-full transition-all duration-350 hover:-translate-y-0.5 hover:shadow-md"
               >
                 Get Quote
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -225,8 +226,8 @@ export default function Navbar() {
           {/* Mobile Links */}
           <ul className="flex flex-col gap-2">
             <li>
-              <a
-                href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/`}
+              <Link
+                href="/"
                 className={`block py-3 px-4 rounded-sm font-semibold uppercase tracking-wide text-sm transition-colors ${
                   pathname === "/"
                     ? "bg-primary/6 text-primary"
@@ -234,7 +235,7 @@ export default function Navbar() {
                 }`}
               >
                 Home
-              </a>
+              </Link>
             </li>
             
             {/* Mobile Services Collapse */}
@@ -254,21 +255,21 @@ export default function Navbar() {
                 {isDropdownOpen && (
                   <ul className="pl-6 mt-1 flex flex-col gap-1 border-l-2 border-primary/20 ml-4">
                     <li>
-                      <a
-                        href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/services`}
+                      <Link
+                        href="/services"
                         className="block py-2 px-4 text-xs font-semibold text-text-dark rounded-sm hover:text-primary"
                       >
                         All Services
-                      </a>
+                      </Link>
                     </li>
                     {servicesList.map((service) => (
                       <li key={service.id}>
-                        <a
+                        <Link
                           href={`/products/${service.id}`}
                           className="block py-2 px-4 text-xs font-medium text-text-muted rounded-sm hover:text-primary"
                         >
                           {service.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -278,7 +279,7 @@ export default function Navbar() {
 
             {navLinks.slice(1).map((link) => (
               <li key={link.name}>
-                <a
+                <Link
                   href={link.href}
                   className={`block py-3 px-4 rounded-sm font-semibold uppercase tracking-wide text-sm transition-colors ${
                     isActive(link.href)
@@ -287,7 +288,7 @@ export default function Navbar() {
                   }`}
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -295,12 +296,12 @@ export default function Navbar() {
 
         {/* Footer info in Mobile menu */}
         <div className="border-t border-border pt-6 mt-6 flex flex-col gap-4">
-          <a
-            href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/contact`}
+          <Link
+            href="/contact"
             className="w-full bg-primary hover:bg-primary-dark text-white text-xs font-bold uppercase tracking-wider py-3 rounded-full text-center transition-all duration-350 flex justify-center items-center"
           >
             Get Quote
-          </a>
+          </Link>
           <a
             href="tel:+919898011309"
             className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white text-xs font-bold uppercase tracking-wider py-3 rounded-full text-center transition-all duration-350 flex justify-center items-center gap-2"

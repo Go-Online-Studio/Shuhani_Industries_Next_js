@@ -17,7 +17,7 @@ export default function BreadcrumbBar({ items }: BreadcrumbBarProps) {
       <div className="container mx-auto px-6">
         <nav className="flex items-center text-xs font-medium">
           <Link
-            href={withBasePath("/")}
+            href="/"
             className="text-primary-light hover:text-primary transition-colors duration-350"
           >
             Home
