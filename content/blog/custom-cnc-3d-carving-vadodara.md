@@ -9,7 +9,7 @@ author: "Suhani Industries"
 
 Are you looking to add a touch of elegance, depth, and personalized artistry to your interiors? Custom **3D carving** is the perfect way to turn standard wooden surfaces into captivating focal points. 
 
-At **[Suhani Industries](https://www.suhaniindustries.in/)**, based right here in **Vadodara**, we specialize in top-tier CNC 3D carving services. We bridge the gap between traditional craftsmanship and modern technology, delivering flawless architectural woodwork for homes, offices, and sacred spaces.
+At **[Suhani Industries](https://suhaniindustries.in/)**, based right here in **Vadodara**, we specialize in top-tier CNC 3D carving services. We bridge the gap between traditional craftsmanship and modern technology, delivering flawless architectural woodwork for homes, offices, and sacred spaces.
 
 ## The Power of CNC 3D Carving
 
@@ -37,4 +37,4 @@ The applications for 3D carving are virtually limitless. Our clients in Vadodara
 
 Do not settle for ordinary when you can have extraordinary. If you are renovating a property or working on a new architectural project in Vadodara, let us handle your intricate woodwork.
 
-Visit **[Suhani Industries](https://www.suhaniindustries.in/)** to learn more about our manufacturing capabilities, or [contact us](/contact) directly to discuss your custom 3D carving project today!
+Visit **[Suhani Industries](https://suhaniindustries.in/)** to learn more about our manufacturing capabilities, or [contact us](/contact) directly to discuss your custom 3D carving project today!

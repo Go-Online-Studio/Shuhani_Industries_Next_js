@@ -9,7 +9,7 @@ author: "Suhani Industries"
 
 Metal fabrication has evolved significantly, and precision is now more critical than ever. Whether for heavy industrial machinery, custom architectural elements, or decorative screens, **Metal CNC Cutting** is the industry standard for transforming sheet metal into precise, complex designs.
 
-At **[Suhani Industries](https://www.suhaniindustries.in/)**, proudly based in **Vadodara**, we offer state-of-the-art metal CNC cutting services. We combine advanced machinery with expert engineering to deliver flawless cuts across a wide variety of metals.
+At **[Suhani Industries](https://suhaniindustries.in/)**, proudly based in **Vadodara**, we offer state-of-the-art metal CNC cutting services. We combine advanced machinery with expert engineering to deliver flawless cuts across a wide variety of metals.
 
 ## Advanced CNC Metal Cutting Technology
 
@@ -35,6 +35,6 @@ Our metal cutting services serve a diverse clientele in Vadodara, including arch
 
 ## Elevate Your Metal Projects Today
 
-Don't let manufacturing limitations hold back your designs. If you need reliable, high-quality metal CNC cutting in Vadodara, **[Suhani Industries](https://www.suhaniindustries.in/)** has the technology and expertise to deliver.
+Don't let manufacturing limitations hold back your designs. If you need reliable, high-quality metal CNC cutting in Vadodara, **[Suhani Industries](https://suhaniindustries.in/)** has the technology and expertise to deliver.
 
 [Contact us today](/contact) to request a quote or discuss the technical requirements of your next metal fabrication project!

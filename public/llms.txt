@@ -3,18 +3,19 @@
 > Leading manufacturer of precision CNC wood and metal products, offering 3D wood carving, 2D CNC cutting, wave board panels, metal CNC work, and wooden legs. Based in Vadodara, Gujarat, serving clients with craftsmanship and engineering excellence since 2010.
 
 Important notes:
-- Official site: https://www.suhaniindustries.in
 - Primary services/products: 3D Wood Carving, 2D CNC Cutting, Wave Board Wall Panels, Metal CNC Machining, Wooden Legs, Custom Fabrication
-- Primary location/service area: C 26, Anur Estate, opp MM Vora Show Room, Soma Talav Cross Road, Vadodara, Gujarat, India
-- Contact: +91 98980 11309 / suhaniindustries09@gmail.com
+- Official site: https://suhaniindustries.in
+- Email: suhaniindustries09@gmail.com
+- Phone: +91 98980 11309
+- Location: C 26, Anur Estate, opp MM Vora Show Room, Soma Talav Cross Road, Vadodara, Gujarat
 - Content policy: Allow public search and AI discovery
 
-## Core Pages
-- Home: https://www.suhaniindustries.in/
-- Services: https://www.suhaniindustries.in/services/
-- About: https://www.suhaniindustries.in/about/
-- Contact: https://www.suhaniindustries.in/contact/
+Key pages:
+- Home: https://suhaniindustries.in/
+- Services: https://suhaniindustries.in/services/
+- About: https://suhaniindustries.in/about/
+- Contact: https://suhaniindustries.in/contact/
 
-## Helpful Resources
-- Gallery: https://www.suhaniindustries.in/gallery/
-- Blog: https://www.suhaniindustries.in/blog/
+Other pages:
+- Gallery: https://suhaniindustries.in/gallery/
+- Blog: https://suhaniindustries.in/blog/

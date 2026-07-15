@@ -9,7 +9,7 @@ author: "Suhani Industries"
 
 When it comes to interior design and architectural woodwork, flat doesn't have to mean plain. **2D carving** and CNC routing offer an incredible way to add intricate patterns, decorative screens, and breathable partitions to any residential or commercial space.
 
-At **[Suhani Industries](https://www.suhaniindustries.in/)**, located in the industrial hub of **Vadodara**, we provide highly accurate and customizable CNC 2D carving services. From complex Jali designs to custom signage, our advanced routing technology ensures a flawless finish every time.
+At **[Suhani Industries](https://suhaniindustries.in/)**, located in the industrial hub of **Vadodara**, we provide highly accurate and customizable CNC 2D carving services. From complex Jali designs to custom signage, our advanced routing technology ensures a flawless finish every time.
 
 ## What is CNC 2D Carving?
 
@@ -35,4 +35,4 @@ Our 2D cutting services are highly sought after by interior designers and archit
 
 Whether you are designing a contemporary apartment or outfitting a new corporate office in Vadodara, our CNC 2D carving services provide the perfect blend of functionality and style. 
 
-Discover the full range of our CNC capabilities at **[Suhani Industries](https://www.suhaniindustries.in/)** or [contact our team](/contact) today to get a quote for your next 2D carving project!
+Discover the full range of our CNC capabilities at **[Suhani Industries](https://suhaniindustries.in/)** or [contact our team](/contact) today to get a quote for your next 2D carving project!

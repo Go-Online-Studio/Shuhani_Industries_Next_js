@@ -9,7 +9,7 @@ author: "Suhani Industries"
 
 In the world of modern interior design, flat and boring walls are a thing of the past. **Wooden wave boards** (also known as 3D textured wall panels) are the ultimate way to add depth, movement, and luxury to any room. 
 
-As a leading CNC wood manufacturer in **Vadodara**, **[Suhani Industries](https://www.suhaniindustries.in/)** produces premium wooden wave board panels that are transforming residential and commercial spaces across Gujarat.
+As a leading CNC wood manufacturer in **Vadodara**, **[Suhani Industries](https://suhaniindustries.in/)** produces premium wooden wave board panels that are transforming residential and commercial spaces across Gujarat.
 
 ## The Magic of 3D Wave Boards
 
@@ -35,4 +35,4 @@ Wave boards are incredibly versatile and can completely redefine a space in Vado
 
 If you are renovating a home or designing a new commercial space in Vadodara, wooden wave boards are a must-have architectural element. 
 
-Explore our extensive range of CNC-cut textured panels at **[Suhani Industries](https://www.suhaniindustries.in/)** and give your walls the dimension they deserve. [Contact us](/contact) to view our catalog and discuss your wave board requirements today!
+Explore our extensive range of CNC-cut textured panels at **[Suhani Industries](https://suhaniindustries.in/)** and give your walls the dimension they deserve. [Contact us](/contact) to view our catalog and discuss your wave board requirements today!

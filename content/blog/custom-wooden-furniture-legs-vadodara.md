@@ -9,7 +9,7 @@ author: "Suhani Industries"
 
 The foundation of great furniture lies not just in its primary structure, but in the details that support it. **Wooden legs** are a crucial component that can make or break the aesthetic appeal and durability of sofas, tables, chairs, and cabinets. 
 
-As a premier woodwork and CNC manufacturing unit in **Vadodara**, **[Suhani Industries](https://www.suhaniindustries.in/)** specializes in producing high-quality, precision-crafted wooden furniture legs for residential and commercial furniture makers.
+As a premier woodwork and CNC manufacturing unit in **Vadodara**, **[Suhani Industries](https://suhaniindustries.in/)** specializes in producing high-quality, precision-crafted wooden furniture legs for residential and commercial furniture makers.
 
 ## Precision CNC Wood Turning
 
@@ -33,6 +33,6 @@ We cater to a wide variety of furniture applications for our clients in Vadodara
 
 ## Support Your Furniture with the Best
 
-Do not compromise on the base of your beautiful furniture. If you are a furniture designer, manufacturer, or interior decorator in Vadodara looking for the finest wooden legs, **[Suhani Industries](https://www.suhaniindustries.in/)** is your trusted local partner.
+Do not compromise on the base of your beautiful furniture. If you are a furniture designer, manufacturer, or interior decorator in Vadodara looking for the finest wooden legs, **[Suhani Industries](https://suhaniindustries.in/)** is your trusted local partner.
 
 [Contact us today](/contact) to discuss your bulk orders or custom furniture leg designs!

@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.suhaniindustries.in";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://suhaniindustries.in";
 
 const nextConfig: NextConfig = {
   output: "export",

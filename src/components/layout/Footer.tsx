@@ -32,7 +32,7 @@ export default function Footer() {
               </p>
               <div className="flex gap-3">
                 <a
-                  href="https://www.facebook.com/sharer/sharer.php?u=https://www.suhaniindustries.in"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://suhaniindustries.in"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white/8 flex items-center justify-center text-white hover:bg-primary hover:-translate-y-0.75 transition-all duration-350"
@@ -41,7 +41,7 @@ export default function Footer() {
                   <FaFacebookF className="text-sm" />
                 </a>
                 <a
-                  href="https://x.com/intent/post?text=Check%20out%20SUHANI%20INDUSTRIES&url=https%3A%2F%2Fwww.suhaniindustries.in"
+                  href="https://x.com/intent/post?text=Check%20out%20SUHANI%20INDUSTRIES&url=https%3A%2F%2Fsuhaniindustries.in"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white/8 flex items-center justify-center text-white hover:bg-primary hover:-translate-y-0.75 transition-all duration-350"
@@ -50,7 +50,7 @@ export default function Footer() {
                   <FaXTwitter className="text-sm" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Furl%3Dhttps%3A%2F%2Fwww.suhaniindustries.in"
+                  href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Furl%3Dhttps%3A%2F%2Fsuhaniindustries.in"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white/8 flex items-center justify-center text-white hover:bg-primary hover:-translate-y-0.75 transition-all duration-350"
@@ -59,7 +59,7 @@ export default function Footer() {
                   <FaLinkedinIn className="text-sm" />
                 </a>
                 <a
-                  href="https://www.pinterest.com/pin/create/button/?https://www.suhaniindustries.in"
+                  href="https://www.pinterest.com/pin/create/button/?https://suhaniindustries.in"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white/8 flex items-center justify-center text-white hover:bg-primary hover:-translate-y-0.75 transition-all duration-350"
