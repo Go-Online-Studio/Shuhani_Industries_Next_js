@@ -30,13 +30,13 @@ export default function PageHero({
       />
 
       {/* Content */}
-      <div className="relative z-20 px-6 py-15 max-w-[700px] flex flex-col items-center">
+      <div className="relative z-20 px-6 py-15 max-w-[800px] flex flex-col items-center">
         {badge && (
           <span className="inline-block text-[11px] font-bold tracking-widest uppercase text-accent bg-accent/18 px-[18px] py-1.5 rounded-full mb-3">
             {badge}
           </span>
         )}
-        <h1 className="text-white text-4xl sm:text-5xl font-extrabold font-heading tracking-tight mb-4 leading-tight">
+        <h1 className="text-white text-2xl sm:text-4xl font-extrabold font-heading tracking-tight mb-4 leading-tight">
           {title}
         </h1>
         {subtitle && (

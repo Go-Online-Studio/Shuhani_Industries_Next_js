@@ -1,10 +1,12 @@
 import React from "react";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import BreadcrumbBar from "@/components/ui/BreadcrumbBar";
 import MarkdownRenderer from "@/components/ui/MarkdownRenderer";
 import CTASection from "@/components/sections/CTASection";
 import { getPostBySlug, getAllSlugs } from "@/lib/blog";
+import { withBasePath } from "@/lib/basePath";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -79,16 +81,18 @@ export default async function BlogPostPage({ params }: Props) {
         title={post.title}
         subtitle={`Published by ${post.author} on ${formattedDate}`}
         badge="Blog Article"
-        bgImage={post.coverImage}
+        bgImage="/images/BackPatternBlog.svg"
       />
 
       {/* 2. Breadcrumbs */}
-      <BreadcrumbBar
-        items={[
-          { name: "Blog", href: "/blog" },
-          { name: post.title },
-        ]}
-      />
+      <div className="hidden sm:block">
+        <BreadcrumbBar
+          items={[
+            { name: "Blog", href: "/blog" },
+            { name: post.title },
+          ]}
+        />
+      </div>
 
       {/* 3. Article Content Section */}
       <section className="py-20 bg-background-custom border-b border-border/30">
@@ -106,10 +110,23 @@ export default async function BlogPostPage({ params }: Props) {
                   </span>
                 ))}
               </div>
-              <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-text-dark leading-tight">
+              <h2 className="font-heading font-extrabold text-xl sm:text-3xl text-text-dark leading-tight">
                 {post.title}
               </h2>
             </div>
+
+            {/* Featured Image Section */}
+            {post.coverImage && (
+              <div className="relative w-full h-[240px] sm:h-[420px] mb-10 rounded-xl overflow-hidden shadow-md border border-border/10 bg-background-custom">
+                <Image
+                  src={withBasePath(post.coverImage)}
+                  alt={post.title}
+                  fill
+                  priority
+                  className="object-cover hover:scale-[1.02] transition-transform duration-500 ease-in-out"
+                />
+              </div>
+            )}
 
             {/* Custom JSX Markdown Content Body */}
             <MarkdownRenderer content={post.content} />
