@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
@@ -7,6 +8,14 @@ import StatCounter from "@/components/ui/StatCounter";
 import CTASection from "@/components/sections/CTASection";
 import { withBasePath } from "@/lib/basePath";
 import { TbTarget, TbBrush, TbClock, TbBulb, TbUsers, TbLeaf, TbArrowRight } from "react-icons/tb";
+
+export const metadata: Metadata = {
+  title: "About Us | Suhani Industries",
+  description: "Learn about Suhani Industries, a leading manufacturer of precision CNC wood and metal products with over 15 years of experience in Vadodara, Gujarat.",
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 const values = [
   {

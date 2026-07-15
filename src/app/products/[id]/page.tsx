@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import PageHero from "@/components/ui/PageHero";
 import BreadcrumbBar from "@/components/ui/BreadcrumbBar";
@@ -18,6 +19,23 @@ export async function generateStaticParams() {
   return productsList.map((product) => ({
     id: product.id,
   }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const product = getProductById(id);
+  
+  if (!product) {
+    return { title: "Product Not Found | Suhani Industries" };
+  }
+
+  return {
+    title: `${product.name} | Suhani Industries`,
+    description: product.shortDesc,
+    alternates: {
+      canonical: `/products/${id}`,
+    },
+  };
 }
 
 export default async function ProductPage({ params }: Props) {

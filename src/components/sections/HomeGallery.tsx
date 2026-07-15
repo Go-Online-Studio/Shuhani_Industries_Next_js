@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 
@@ -58,28 +58,28 @@ export default function HomeGallery() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Autoplay functionality
-  useEffect(() => {
-    startTimer();
-    return () => stopTimer();
-  }, [activeIndex]);
+  const handleNext = useCallback(() => {
+    setActiveIndex((prev) => (prev + 1) % testimonials.length);
+  }, []);
 
-  const startTimer = () => {
+  const stopTimer = useCallback(() => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
+  }, []);
+
+  const startTimer = useCallback(() => {
     stopTimer();
     timerRef.current = setInterval(() => {
       handleNext();
     }, 5000);
-  };
+  }, [handleNext, stopTimer]);
 
-  const stopTimer = () => {
-    if (timerRef.current) {
-      clearInterval(timerRef.current);
-    }
-  };
-
-  const handleNext = () => {
-    setActiveIndex((prev) => (prev + 1) % testimonials.length);
-  };
+  // Autoplay functionality
+  useEffect(() => {
+    startTimer();
+    return () => stopTimer();
+  }, [startTimer, stopTimer]);
 
   const handleDotClick = (index: number) => {
     setActiveIndex(index);

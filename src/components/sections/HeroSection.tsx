@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaWhatsapp, FaThLarge } from "react-icons/fa";
 import StatCounter from "@/components/ui/StatCounter";
 import { withBasePath } from "@/lib/basePath";
@@ -16,9 +17,18 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-[calc(100vh-68px)] flex items-center bg-center bg-cover bg-no-repeat py-20 overflow-hidden"
-      style={{ backgroundImage: `url('${withBasePath("/images/hero_bg.png")}')` }}
+      className="relative min-h-[calc(100vh-68px)] flex items-center py-20 overflow-hidden"
     >
+      {/* Background Image Optimized for LCP */}
+      <Image
+        src={withBasePath("/images/hero_bg.png")}
+        alt="Suhani Industries CNC Machining Background"
+        fill
+        priority
+        className="object-cover object-center"
+        quality={85}
+      />
+
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/82 via-black/55 to-black/20 z-0" />
 

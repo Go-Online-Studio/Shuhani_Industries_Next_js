@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import BentoSection from "@/components/sections/BentoSection";
@@ -6,6 +7,14 @@ import HomeGallery from "@/components/sections/HomeGallery";
 import FeatureBanner from "@/components/sections/FeatureBanner";
 import ProcessSection from "@/components/sections/ProcessSection";
 import CTASection from "@/components/sections/CTASection";
+
+export const metadata: Metadata = {
+  title: "Suhani Industries | Precision CNC Wood & Metal Products",
+  description: "Leading manufacturer of high-quality CNC 3D wood carvings, 2D cutting, wave board wall panels, metal CNC machining, and premium wooden legs in Vadodara, Gujarat.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (

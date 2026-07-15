@@ -1,10 +1,19 @@
 import React from "react";
+import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import BreadcrumbBar from "@/components/ui/BreadcrumbBar";
 import BlogCard from "@/components/ui/BlogCard";
 import CTASection from "@/components/sections/CTASection";
 import { getAllPosts } from "@/lib/blog";
 import { withBasePath } from "@/lib/basePath";
+
+export const metadata: Metadata = {
+  title: "Blog & Insights | Suhani Industries",
+  description: "Read our latest insights and industry trends in CNC machining, architectural wall panel design, and premium woodworking.",
+  alternates: {
+    canonical: "/blog",
+  },
+};
 
 export default async function BlogPage() {
   // Read posts directly from file system on the server

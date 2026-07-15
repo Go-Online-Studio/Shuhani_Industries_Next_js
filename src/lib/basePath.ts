@@ -1,11 +1,8 @@
 export function withBasePath(path: string): string {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const prefix = baseUrl || basePath || "";
   const ASSET_VERSION = "1.0.0"; // Increment this when updating static assets in /public
 
   if (!path) {
-    return prefix || "/";
+    return "/";
   }
 
   if (/^(https?:)?\/\//i.test(path) || path.startsWith("data:")) {
@@ -13,22 +10,7 @@ export function withBasePath(path: string): string {
   }
 
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
-  
-  let fullPath = normalizedPath;
-  if (prefix) {
-    if (baseUrl && normalizedPath.startsWith(baseUrl)) {
-      fullPath = normalizedPath;
-    } else if (basePath && normalizedPath.startsWith(basePath)) {
-      // If it has basePath but we want to use baseUrl
-      if (baseUrl) {
-        fullPath = baseUrl + normalizedPath.substring(basePath.length);
-      } else {
-        fullPath = normalizedPath;
-      }
-    } else {
-      fullPath = `${prefix}${normalizedPath}`;
-    }
-  }
+  const fullPath = normalizedPath;
 
   // Check if it's a static asset file (ends with a common extension)
   const pathWithoutQuery = fullPath.split(/[?#]/)[0];

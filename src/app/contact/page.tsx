@@ -1,10 +1,19 @@
 import React from "react";
+import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import BreadcrumbBar from "@/components/ui/BreadcrumbBar";
 import ContactCard from "@/components/ui/ContactCard";
 import ContactForm from "@/components/sections/ContactForm";
 import { TbMapPin, TbPhone, TbMail, TbClock } from "react-icons/tb";
 import { withBasePath } from "@/lib/basePath";
+
+export const metadata: Metadata = {
+  title: "Contact Us | Request a Quote | Suhani Industries",
+  description: "Get in touch with Suhani Industries for custom CNC machining, wood carving, or metal fabrication projects in Vadodara, Gujarat. Request a free quote.",
+  alternates: {
+    canonical: "/contact",
+  },
+};
 
 export default function ContactPage() {
   return (
@@ -31,10 +40,10 @@ export default function ContactPage() {
                 Reach Out
               </span>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-text-dark mb-5 leading-tight">
-                Let's Discuss Your Project
+                Let&apos;s Discuss Your Project
               </h2>
               <p className="text-text-muted text-sm sm:text-base leading-relaxed font-light mb-10">
-                Whether you need a single prototype or a bulk production run — we're here to help. Choose any channel below or fill out the form.
+                Whether you need a single prototype or a bulk production run — we&apos;re here to help. Choose any channel below or fill out the form.
               </p>
 
               {/* Grid of Contact Details */}

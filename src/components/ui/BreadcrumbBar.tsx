@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { withBasePath } from "@/lib/basePath";
 
 interface Breadcrumb {
   name: string;

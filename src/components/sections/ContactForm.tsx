@@ -32,7 +32,7 @@ export default function ContactForm() {
         Send Us a Message
       </h3>
       <p className="text-xs text-text-muted mb-8 leading-relaxed">
-        Fill in the details below and we'll get back to you shortly.
+        Fill in the details below and we&apos;ll get back to you shortly.
       </p>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">

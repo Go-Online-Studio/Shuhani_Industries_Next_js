@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
 interface StatCounterProps {
   count: number;
@@ -20,6 +20,29 @@ export default function StatCounter({
   const [displayCount, setDisplayCount] = useState(0);
   const elementRef = useRef<HTMLDivElement>(null);
   const animatedRef = useRef(false);
+
+  const startCountAnimation = useCallback(() => {
+    let startTimestamp: number | null = null;
+    const duration = 1800; // ms
+
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      
+      // Cubic ease-out
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      
+      setDisplayCount(Math.floor(easedProgress * count));
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        setDisplayCount(count);
+      }
+    };
+
+    requestAnimationFrame(step);
+  }, [count]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -44,30 +67,7 @@ export default function StatCounter({
         observer.unobserve(currentElement);
       }
     };
-  }, [count]);
-
-  const startCountAnimation = () => {
-    let startTimestamp: number | null = null;
-    const duration = 1800; // ms
-
-    const step = (timestamp: number) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      
-      // Cubic ease-out
-      const easedProgress = 1 - Math.pow(1 - progress, 3);
-      
-      setDisplayCount(Math.floor(easedProgress * count));
-
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      } else {
-        setDisplayCount(count);
-      }
-    };
-
-    requestAnimationFrame(step);
-  };
+  }, [count, startCountAnimation]);
 
   return (
     <div ref={elementRef} className={`flex flex-col ${className}`}>

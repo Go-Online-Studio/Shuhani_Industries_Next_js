@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
@@ -6,6 +7,14 @@ import BreadcrumbBar from "@/components/ui/BreadcrumbBar";
 import CTASection from "@/components/sections/CTASection";
 import { FaArrowRight } from "react-icons/fa6";
 import { withBasePath } from "@/lib/basePath";
+
+export const metadata: Metadata = {
+  title: "Our Services | CNC Wood & Metal Machining | Suhani Industries",
+  description: "Comprehensive precision manufacturing solutions: 3D wood carving, 2D CNC cutting, wave board wall panels, metal CNC machining, and custom wooden legs.",
+  alternates: {
+    canonical: "/services",
+  },
+};
 
 const servicesList = [
   {
