@@ -31,7 +31,7 @@ export default function BlogCard({
   return (
     <article className="group bg-bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-350 ease-crafter flex flex-col h-full border border-border/40">
       {/* Image Container */}
-      <Link href={`/blog/${slug}`} className="relative aspect-[16/10] overflow-hidden block">
+      <Link href={`/blog/${slug}`} className="relative aspect-square overflow-hidden block">
         <Image
           src={withBasePath(coverImage)}
           alt={title}

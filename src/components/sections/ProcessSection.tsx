@@ -34,11 +34,6 @@ const processItems = [
 ];
 
 export default function ProcessSection() {
-  const handleStartProject = (e: React.MouseEvent, service = "CNC Machining") => {
-    e.preventDefault();
-    window.open(getWhatsAppLink(service), "_blank", "noopener,noreferrer");
-  };
-
   return (
     <section id="process" className="py-24 bg-white">
       <div className="container mx-auto px-6">
@@ -56,8 +51,9 @@ export default function ProcessSection() {
               From initial consultation to final delivery, we follow a streamlined process that ensures every project is completed to the highest standard — on time and within budget.
             </p>
             <a
-              href="#"
-              onClick={(e) => handleStartProject(e, "CNC Machining")}
+              href={getWhatsAppLink("CNC Machining")}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-xs font-bold uppercase tracking-wider px-7 py-4 rounded-full transition-all duration-350 hover:-translate-y-0.5 hover:shadow-md cursor-pointer w-fit"
             >
               <TbMessageCircle className="text-base" /> Start a Project
@@ -67,9 +63,11 @@ export default function ProcessSection() {
           {/* Right Column: Process List */}
           <div className="lg:col-span-7 flex flex-col w-full">
             {processItems.map((item, index) => (
-              <div
+              <a
                 key={item.num}
-                onClick={(e) => handleStartProject(e, item.title)}
+                href={getWhatsAppLink(item.title)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`grid grid-cols-1 sm:grid-cols-[60px_90px_1fr_auto] items-center gap-5 py-6 border-b border-border hover:bg-primary/3 hover:rounded-md hover:px-2 cursor-pointer transition-all duration-350 group ${
                   index === 0 ? "border-t border-border" : ""
                 }`}
@@ -100,13 +98,13 @@ export default function ProcessSection() {
                 </div>
 
                 {/* Action Button */}
-                <button
+                <div
                   className="w-11 h-11 rounded-full bg-primary text-white flex items-center justify-center transition-all duration-350 group-hover:bg-primary-dark group-hover:scale-[1.1] flex-shrink-0 cursor-pointer hidden sm:flex"
                   aria-label={`Inquire about ${item.title}`}
                 >
                   <TbArrowUpRight className="text-sm" />
-                </button>
-              </div>
+                </div>
+              </a>
             ))}
           </div>
 

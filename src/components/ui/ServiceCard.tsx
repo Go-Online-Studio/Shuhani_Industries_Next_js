@@ -23,11 +23,6 @@ export default function ServiceCard({
   imageUrl,
   tag,
 }: ServiceCardProps) {
-  const handleWhatsAppClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    window.open(getWhatsAppLink(title), "_blank", "noopener,noreferrer");
-  };
-
   return (
     <div className="group bg-bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-350 ease-crafter flex flex-col h-full border border-border/40">
       {/* Image Container */}
@@ -57,13 +52,15 @@ export default function ServiceCard({
           <span className="text-[11px] font-bold tracking-wider uppercase text-primary bg-primary/10 px-3.5 py-1.25 rounded-full">
             {tag}
           </span>
-          <button
-            onClick={handleWhatsAppClick}
+          <a
+            href={getWhatsAppLink(title)}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-11 h-11 rounded-full bg-primary text-white flex items-center justify-center transition-all duration-350 hover:bg-primary-dark hover:scale-[1.1] flex-shrink-0 cursor-pointer" 
             aria-label={`Enquire about ${title} on WhatsApp`}
           >
             <TbArrowUpRight className="text-sm" />
-          </button>
+          </a>
         </div>
       </div>
     </div>

@@ -9,11 +9,6 @@ import { withBasePath } from "@/lib/basePath";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 
 export default function HeroSection() {
-  const handleQuoteClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.open(getWhatsAppLink("CNC Machining"), "_blank", "noopener,noreferrer");
-  };
-
   return (
     <section
       id="hero"
@@ -55,8 +50,9 @@ export default function HeroSection() {
           {/* Call-to-actions */}
           <div className="flex flex-wrap gap-4 mb-15">
             <a
-              href="#"
-              onClick={handleQuoteClick}
+              href={getWhatsAppLink("CNC Machining")}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-xs font-bold uppercase tracking-wider px-7 py-4 rounded-full transition-all duration-350 hover:-translate-y-0.5 hover:shadow-md cursor-pointer"
             >
               <FaWhatsapp className="text-sm" /> Get Free Quote

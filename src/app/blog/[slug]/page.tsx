@@ -117,7 +117,7 @@ export default async function BlogPostPage({ params }: Props) {
 
             {/* Featured Image Section */}
             {post.coverImage && (
-              <div className="relative w-full h-[240px] sm:h-[420px] mb-10 rounded-xl overflow-hidden shadow-md border border-border/10 bg-background-custom">
+              <div className="relative w-full aspect-square mb-10 rounded-xl overflow-hidden shadow-md border border-border/10 bg-background-custom"> 
                 <Image
                   src={withBasePath(post.coverImage)}
                   alt={post.title}

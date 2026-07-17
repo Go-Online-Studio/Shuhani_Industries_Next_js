@@ -5,11 +5,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 
 export default function CTASection() {
-  const handleQuoteClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.open(getWhatsAppLink("Custom Fabrication"), "_blank", "noopener,noreferrer");
-  };
-
   return (
     <section id="cta" className="py-24 bg-background-custom">
       <div className="container mx-auto px-6">
@@ -33,8 +28,9 @@ export default function CTASection() {
               Tell us about your project and we&rsquo;ll get back to you with a custom quote within 24 hours.
             </p>
             <a
-              href="#"
-              onClick={handleQuoteClick}
+              href={getWhatsAppLink("Custom Fabrication")}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white hover:bg-background-custom text-primary text-xs font-bold uppercase tracking-wider px-8 py-4 rounded-full transition-all duration-350 hover:-translate-y-0.5 hover:shadow-md cursor-pointer"
             >
               <FaWhatsapp className="text-base" /> Request a Free Quote

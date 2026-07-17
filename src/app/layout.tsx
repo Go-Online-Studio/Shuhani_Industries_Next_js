@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloat from "@/components/layout/WhatsAppFloat";
+import WhatsAppLinkDynamic from "@/components/layout/WhatsAppLinkDynamic";
 
 // Configure premium typography using Google Fonts via next/font (Zero CLS)
 const inter = Inter({
@@ -112,6 +113,7 @@ export default function RootLayout({
 
         {/* Floating Interactive Elements */}
         <WhatsAppFloat />
+        <WhatsAppLinkDynamic />
       </body>
     </html>
   );

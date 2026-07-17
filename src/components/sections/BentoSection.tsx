@@ -7,11 +7,6 @@ import { getWhatsAppLink } from "@/lib/whatsapp";
 import { withBasePath } from "@/lib/basePath";
 
 export default function BentoSection() {
-  const handleStartProject = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.open(getWhatsAppLink("Custom Fabrication"), "_blank", "noopener,noreferrer");
-  };
-
   return (
     <section id="about" className="py-24 bg-white">
       <div className="container mx-auto px-6">
@@ -117,8 +112,9 @@ export default function BentoSection() {
 
             {/* CTA */}
             <a
-              href="#"
-              onClick={handleStartProject}
+              href={getWhatsAppLink("Custom Fabrication")}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-xs font-bold uppercase tracking-wider px-7 py-4 rounded-full transition-all duration-350 hover:-translate-y-0.5 hover:shadow-md cursor-pointer w-fit"
             >
               <TbArrowRight className="text-base" /> Start Your Project

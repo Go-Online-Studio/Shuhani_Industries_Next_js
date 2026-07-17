@@ -21,13 +21,26 @@ export default function ContactForm() {
 
     const waNumber = "919898011309";
     const encoded = encodeURIComponent(text);
-    const url = `https://wa.me/${waNumber}?text=${encoded}`;
+    
+    let url = "";
+    if (window.innerWidth <= 767.98) {
+      const isAndroid = /android/i.test(navigator.userAgent || navigator.vendor || (window as any).opera);
+      if (isAndroid) {
+        url = `intent://send?phone=${waNumber}&text=${encoded}#Intent;scheme=whatsapp;package=com.whatsapp;end`;
+        window.location.href = url;
+        return;
+      } else {
+        url = `https://wa.me/${waNumber}?text=${encoded}`;
+      }
+    } else {
+      url = `https://web.whatsapp.com/send?phone=${waNumber}&text=${encoded}`;
+    }
 
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
-    <div className="bg-bg-card rounded-lg p-10 shadow-sm border border-border/30 w-full max-w-[560px] mx-auto lg:mx-0">
+    <div className="bg-bg-card rounded-lg p-4 md:p-10 shadow-sm border border-border/30 w-full max-w-[560px] mx-auto lg:mx-0">
       <h3 className="font-heading font-bold text-xl text-text-dark mb-2">
         Send Us a Message
       </h3>
