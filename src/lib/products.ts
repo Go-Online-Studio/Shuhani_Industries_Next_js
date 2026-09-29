@@ -141,7 +141,6 @@ export const productsList: Product[] = [
     images: [
       withBasePath("/images/productImages/WoodenLegProduct.webp"),
       withBasePath("/images/WOODEN_LEGS_ServiceImg.webp"),
-      withBasePath("/images/bannerImage.webp"),
     ],
   },
   {
@@ -165,7 +164,6 @@ export const productsList: Product[] = [
     ],
     images: [
       withBasePath("/images/waveBoardAbout.webp"),
-      withBasePath("/images/bannerImage.webp"),
       withBasePath("/images/A_DECADE_OF_INNOVATION.webp"),
     ],
   },
