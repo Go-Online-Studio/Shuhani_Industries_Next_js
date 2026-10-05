@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 interface MarkdownRendererProps {
   content: string;
@@ -54,7 +55,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
           return (
             <ul key={blockIndex} className="list-disc pl-6 flex flex-col gap-2.5 my-2">
               {items.map((item, itemIndex) => {
-                // Parse bold text in list items
+                // Parse bold text and links in list items
                 const parts = parseInlineMarkdown(item);
                 return (
                   <li key={itemIndex} className="text-text-muted text-xs sm:text-sm leading-relaxed">
@@ -144,11 +145,11 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
 }
 
 /**
- * Helper to parse bold (**text**) and highlight inline markdown elements into React nodes.
+ * Helper to parse bold (**text**) and links ([text](url)) inline markdown elements into React nodes.
  */
 function parseInlineMarkdown(text: string): React.ReactNode[] {
-  // Regex to match **bold**
-  const regex = /(\*\*.*?\*\*)/g;
+  // Regex to match **bold** or [link text](url)
+  const regex = /(\*\*.*?\*\*|\[.*?\]\(.*?\))/g;
   const parts = text.split(regex);
 
   return parts.map((part, index) => {
@@ -157,6 +158,33 @@ function parseInlineMarkdown(text: string): React.ReactNode[] {
         <strong key={index} className="font-semibold text-text-dark">
           {part.slice(2, -2)}
         </strong>
+      );
+    }
+    const linkMatch = part.match(/^\[(.*?)\]\((.*?)\)$/);
+    if (linkMatch) {
+      const [, label, href] = linkMatch;
+      const isInternal = href.startsWith("/") || href.startsWith("#");
+      if (isInternal) {
+        return (
+          <Link
+            key={index}
+            href={href}
+            className="text-primary font-medium hover:underline transition-colors"
+          >
+            {label}
+          </Link>
+        );
+      }
+      return (
+        <a
+          key={index}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary font-medium hover:underline transition-colors"
+        >
+          {label}
+        </a>
       );
     }
     return part;

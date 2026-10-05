@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { getAllSlugs } from "@/lib/blog";
 
 export const dynamic = "force-static";
 
@@ -35,5 +36,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  return [...routes, ...products];
+  // Blog Posts
+  const blogSlugs = getAllSlugs();
+  const blogs = blogSlugs.map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  return [...routes, ...products, ...blogs];
 }
+
