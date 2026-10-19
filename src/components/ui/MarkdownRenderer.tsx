@@ -49,7 +49,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
         if (trimmed.startsWith("* ") || trimmed.startsWith("- ")) {
           const items = trimmed
             .split(/\n/)
-            .map((item) => item.replace(/^[*-\s]+/, "").trim())
+            .map((item) => item.replace(/^[-*]\s+/, "").trim())
             .filter(Boolean);
 
           return (
@@ -154,9 +154,14 @@ function parseInlineMarkdown(text: string): React.ReactNode[] {
 
   return parts.map((part, index) => {
     if (part.startsWith("**") && part.endsWith("**")) {
+      const inner = part.slice(2, -2);
+      const innerContent = inner.includes("[") && inner.includes("]")
+        ? parseInlineMarkdown(inner)
+        : inner;
+
       return (
         <strong key={index} className="font-semibold text-text-dark">
-          {part.slice(2, -2)}
+          {innerContent}
         </strong>
       );
     }

@@ -31,13 +31,20 @@ export async function generateMetadata({ params }: Props): Promise<import("next"
     };
   }
 
+  const metaTitle = post.title.includes("Suhani")
+    ? post.title
+    : `${post.title} | Suhani Industries Blog`;
+
   return {
-    title: `${post.title} | Suhani Industries Blog`,
+    title: metaTitle,
     description: post.excerpt,
     keywords: post.tags.join(", "),
     authors: [{ name: post.author }],
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
     openGraph: {
-      title: post.title,
+      title: metaTitle,
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,
@@ -53,7 +60,7 @@ export async function generateMetadata({ params }: Props): Promise<import("next"
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: metaTitle,
       description: post.excerpt,
       images: [post.coverImage],
     },
