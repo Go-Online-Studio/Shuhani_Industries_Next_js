@@ -7,6 +7,7 @@ import { withBasePath } from "@/lib/basePath";
 
 export interface BlogPost {
   title: string;
+  metaTitle?: string;
   slug: string;
   date: string;
   excerpt: string;
@@ -55,6 +56,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
           contentHtml,
           content: matterResult.content,
           title: matterResult.data.title || "Untitled Post",
+          metaTitle: matterResult.data.metaTitle,
           date: matterResult.data.date || new Date().toISOString().split("T")[0],
           excerpt: matterResult.data.excerpt || "",
           coverImage: matterResult.data.coverImage || withBasePath("/images/bannerImage.webp"),
@@ -109,6 +111,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     contentHtml,
     content: matterResult.content,
     title: matterResult.data.title || "Untitled Post",
+    metaTitle: matterResult.data.metaTitle,
     date: matterResult.data.date || new Date().toISOString().split("T")[0],
     excerpt: matterResult.data.excerpt || "",
     coverImage: matterResult.data.coverImage || withBasePath("/images/bannerImage.webp"),

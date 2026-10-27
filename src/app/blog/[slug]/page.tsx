@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<import("next"
     };
   }
 
-  const metaTitle = post.title.includes("Suhani")
+  const metaTitle = post.metaTitle || (post.title.includes("Suhani")
     ? post.title
-    : `${post.title} | Suhani Industries Blog`;
+    : `${post.title} | Suhani Industries Blog`);
 
   return {
     title: metaTitle,
